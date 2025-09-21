@@ -19,12 +19,6 @@
       padding: 2rem;
       text-align: center;
     }
-    header img {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      margin-bottom: 1rem;
-    }
     header h1 {
       margin-bottom: 0.3rem;
       font-size: 2.5rem;
@@ -56,7 +50,6 @@
     }
     label {
       font-weight: 600;
-      margin-bottom: -0.5rem;
     }
     input, textarea, button {
       padding: 0.8rem;
@@ -88,12 +81,13 @@
       padding: 1rem;
       margin-top: 2rem;
     }
-    footer a {
-      color: white;
-      margin: 0 10px;
+    footer nav a {
+      color: #ffcc00;
+      margin: 0 1rem;
       text-decoration: none;
+      font-weight: 600;
     }
-    footer a:hover {
+    footer nav a:hover {
       text-decoration: underline;
     }
     @media (max-width: 768px) {
@@ -106,8 +100,8 @@
 <body>
 
   <header>
-    <img src="profile.jpg" alt="Profile picture of Ruben Brown">
     <h1>Ruben Brown</h1>
+    <img src="profile.jpg" alt="Portrait of Ruben Brown" width="150" style="border-radius:50%; margin-top:1rem;">
     <p>Email: rubenb@example.com</p>
     <p>Phone: 078 083 5992</p>
     <p>Location: Cape Town, Western Cape</p>
@@ -157,7 +151,7 @@
   <section id="search">
     <h2>Search</h2>
     <form method="get" action="/search">
-      <label for="search-box">Search Keywords</label>
+      <label for="search-box">Search CV</label>
       <input type="text" id="search-box" name="query" placeholder="Enter keywords">
       <button type="submit">Search</button>
     </form>
@@ -166,13 +160,13 @@
   <section id="contact">
     <h2>Contact Me</h2>
     <form method="post" action="/contact">
-      <label for="name">Name</label>
+      <label for="name">Your Name</label>
       <input type="text" id="name" name="name" placeholder="Your Name" required>
 
-      <label for="email">Email</label>
+      <label for="email">Your Email</label>
       <input type="email" id="email" name="email" placeholder="Your Email" required>
 
-      <label for="message">Message</label>
+      <label for="message">Your Message</label>
       <textarea id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
 
       <button type="submit">Send Message</button>
@@ -182,10 +176,11 @@
   <footer>
     <p>&copy; 2025 Ruben Brown. All rights reserved.</p>
     <nav>
-      <a href="#bio">Bio</a> |
-      <a href="#skills">Skills</a> |
-      <a href="#education">Education</a> |
-      <a href="#work">Work Experience</a> |
+      <a href="#bio">Bio</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#work">Work</a>
+      <a href="#search">Search</a>
       <a href="#contact">Contact</a>
     </nav>
   </footer>
